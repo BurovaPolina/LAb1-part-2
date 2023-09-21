@@ -78,7 +78,6 @@ namespace LAb1_part_2
 
     public class NumericTextBox : TextBox
     {
-        
         public NumericTextBox()
         {
             this.KeyPress += NumericTextBox_KeyPress;
