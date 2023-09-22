@@ -48,26 +48,21 @@ namespace LAb1_part_2
             Console.WriteLine(textBox2.Text);
             Console.WriteLine(textBox3.Text);
 
-            switch (textBox2.Text) {
-                case "+":
-                    linkLabel1.Text = (Double.Parse(textBox1.Text) + Double.Parse(textBox3.Text)).ToString();
-                    break;
-                case "-":
-                    linkLabel1.Text = (Double.Parse(textBox1.Text) - Double.Parse(textBox3.Text)).ToString();
-                    break;
-                case "*":
-                    linkLabel1.Text = (Double.Parse(textBox1.Text) * Double.Parse(textBox3.Text)).ToString();
-                    break;
-                case "/":
-                    linkLabel1.Text = (Convert.ToDouble(textBox1.Text) / Convert.ToDouble(textBox3.Text)).ToString();
-                    break;
-
-                default:
-                    break;
-
+            if (textBox2.Text == "+") {
+                linkLabel1.Text = (Double.Parse(textBox1.Text) + Double.Parse(textBox3.Text)).ToString();
             }
-
-           linkLabel1.Text = textBox1.Text + textBox2.Text + textBox3.Text;
+            else if(textBox2.Text == "-") {
+                linkLabel1.Text = (Double.Parse(textBox1.Text) - Double.Parse(textBox3.Text)).ToString();
+            }
+            else if(textBox2.Text == "*") {
+                linkLabel1.Text = (Double.Parse(textBox1.Text) * Double.Parse(textBox3.Text)).ToString();
+            }
+            else if (textBox2.Text == "/") {
+                linkLabel1.Text = (Convert.ToDouble(textBox1.Text) / Convert.ToDouble(textBox3.Text)).ToString();
+            }
+            else {
+                return;
+            }
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
