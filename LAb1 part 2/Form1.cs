@@ -44,21 +44,18 @@ namespace LAb1_part_2
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Console.WriteLine(textBox1.Text);
-            Console.WriteLine(textBox2.Text);
-            Console.WriteLine(textBox3.Text);
 
-            if (textBox2.Text == "+") {
-                linkLabel1.Text = (Double.Parse(textBox1.Text) + Double.Parse(textBox3.Text)).ToString();
+            if (operTextBox.Text == "+") {
+                labelResut.Text = (Double.Parse(valFirstTextBox.Text) + Double.Parse(valSecondTextBox.Text)).ToString();
             }
-            else if(textBox2.Text == "-") {
-                linkLabel1.Text = (Double.Parse(textBox1.Text) - Double.Parse(textBox3.Text)).ToString();
+            else if(operTextBox.Text == "-") {
+                labelResut.Text = (Double.Parse(valFirstTextBox.Text) - Double.Parse(valSecondTextBox.Text)).ToString();
             }
-            else if(textBox2.Text == "*") {
-                linkLabel1.Text = (Double.Parse(textBox1.Text) * Double.Parse(textBox3.Text)).ToString();
+            else if(operTextBox.Text == "*") {
+                labelResut.Text = (Double.Parse(valFirstTextBox.Text) * Double.Parse(valSecondTextBox.Text)).ToString();
             }
-            else if (textBox2.Text == "/") {
-                linkLabel1.Text = (Convert.ToDouble(textBox1.Text) / Convert.ToDouble(textBox3.Text)).ToString();
+            else if (operTextBox.Text == "/") {
+                labelResut.Text = (Convert.ToDouble(valFirstTextBox.Text) / Convert.ToDouble(valSecondTextBox.Text)).ToString();
             }
             else {
                 return;
