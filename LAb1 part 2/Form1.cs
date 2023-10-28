@@ -44,18 +44,19 @@ namespace LAb1_part_2
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Console.WriteLine("смотрим переменную operTextBox.Text:{0}", operTextBox.Text);
 
             if (operTextBox.Text == "+") {
-                labelResut.Text = (Double.Parse(valFirstTextBox.Text) + Double.Parse(valSecondTextBox.Text)).ToString();
+                labelResut.Text = (Double.Parse(valFirstTextBox.Text.Trim()) + Double.Parse(valSecondTextBox.Text.Replace(" ", ""))).ToString();
             }
             else if(operTextBox.Text == "-") {
-                labelResut.Text = (Double.Parse(valFirstTextBox.Text) - Double.Parse(valSecondTextBox.Text)).ToString();
+                labelResut.Text = (Double.Parse(valFirstTextBox.Text.Trim()) - Double.Parse(valSecondTextBox.Text.Replace(" ", ""))).ToString();
             }
             else if(operTextBox.Text == "*") {
-                labelResut.Text = (Double.Parse(valFirstTextBox.Text) * Double.Parse(valSecondTextBox.Text)).ToString();
+                labelResut.Text = (Double.Parse(valFirstTextBox.Text.Trim()) * Double.Parse(valSecondTextBox.Text.Replace(" ", ""))).ToString();
             }
             else if (operTextBox.Text == "/") {
-                labelResut.Text = (Convert.ToDouble(valFirstTextBox.Text) / Convert.ToDouble(valSecondTextBox.Text)).ToString();
+                labelResut.Text = (Convert.ToDouble(valFirstTextBox.Text.Trim()) / Convert.ToDouble(valSecondTextBox.Text.Replace(" ", ""))).ToString();
             }
             else {
                 return;
@@ -63,6 +64,11 @@ namespace LAb1_part_2
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

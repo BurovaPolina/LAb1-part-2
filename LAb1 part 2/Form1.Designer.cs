@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.valFirstTextBox = new NumericTextBox();
-            this.operTextBox = new OperationTextBox();
-            this.valSecondTextBox = new NumericTextBox();
+            this.valFirstTextBox = new LAb1_part_2.NumericTextBox();
+            this.operTextBox = new LAb1_part_2.OperationTextBox();
+            this.valSecondTextBox = new LAb1_part_2.NumericTextBox();
             this.labelResut = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
@@ -63,7 +63,7 @@
             this.labelResut.AutoSize = true;
             this.labelResut.Location = new System.Drawing.Point(355, 25);
             this.labelResut.Name = "labelResut";
-            this.labelResut.Size = new System.Drawing.Size(55, 13);
+            this.labelResut.Size = new System.Drawing.Size(57, 13);
             this.labelResut.TabIndex = 3;
             this.labelResut.TabStop = true;
             this.labelResut.Text = "labelResut";
@@ -80,17 +80,17 @@
             this.Controls.Add(this.valFirstTextBox);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox valFirstTextBox;
-        private System.Windows.Forms.TextBox operTextBox;
-        private System.Windows.Forms.TextBox valSecondTextBox;
         private System.Windows.Forms.LinkLabel labelResut;
+        private NumericTextBox valFirstTextBox;
+        private OperationTextBox operTextBox;
+        private NumericTextBox valSecondTextBox;
     }
 }
 
