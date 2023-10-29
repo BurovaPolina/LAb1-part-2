@@ -48,25 +48,34 @@ namespace LAb1_part_2
 
             if (operTextBox.Text == "+") {
                 labelResut.Text = (Double.Parse(valFirstTextBox.Text.Trim()) + Double.Parse(valSecondTextBox.Text.Replace(" ", ""))).ToString();
+                resultform(labelResut.Text);
             }
             else if(operTextBox.Text == "-") {
                 labelResut.Text = (Double.Parse(valFirstTextBox.Text.Trim()) - Double.Parse(valSecondTextBox.Text.Replace(" ", ""))).ToString();
+                resultform(labelResut.Text);
+
             }
             else if(operTextBox.Text == "*") {
                 labelResut.Text = (Double.Parse(valFirstTextBox.Text.Trim()) * Double.Parse(valSecondTextBox.Text.Replace(" ", ""))).ToString();
+                resultform(labelResut.Text);
             }
             else if (operTextBox.Text == "/") {
                 labelResut.Text = (Convert.ToDouble(valFirstTextBox.Text.Trim()) / Convert.ToDouble(valSecondTextBox.Text.Replace(" ", ""))).ToString();
+                resultform(labelResut.Text);
             }
             else {
                 return;
             }
         }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+       
+        private void resultform(string result)
         {
-
+            Form2 newForm = new Form2();
+            newForm.result.Text = result;
+            newForm.Show();
         }
+            
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
